@@ -1,0 +1,44 @@
+.wrapper {
+	border: 10px solid grey;
+	height: 800px;
+	width: 800px;
+	font-size: 0;
+}
+
+.kletki-even, .kletki-odd {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: none;
+	background: orange;
+}
+
+.wrapper .kletki-even:nth-child(even),
+.wrapper .kletki-odd:nth-child(odd) {
+	background: brown;
+}
+
+.wrapper .kletki-odd:nth-child(-2n+31) .checker,
+.wrapper .kletki-even:nth-child(-2n+24) .checker {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 10px;
+	right: 10px;
+	background: black;
+	border: 15px solid grey;
+	border-radius: 50%;
+}
+
+.wrapper .kletki-odd:nth-child(2n+49) .checker,
+.wrapper .kletki-even:nth-child(2n+42) .checker {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 10px;
+	right: 10px;
+	background: white;
+	border: 15px solid grey;
+	border-radius: 50%;
+}
